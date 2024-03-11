@@ -26,13 +26,13 @@ class ProcessJobs:
         return set(unique_job_types)
 
     def filter_by_multiple_criteria(self, jobs, criteria) -> List[dict]:
-        industry = "industry"
-        job_type = "job_type"
+        i = "industry"
+        jt = "job_type"
         found_criteria = False
         filtered_jobs = list()
 
         for job in jobs:
-            if job[industry] == criteria[industry] and job[job_type] == criteria[job_type]:
+            if job[i] == criteria[i] and job[jt] == criteria[jt]:
                 filtered_jobs.append(job)
                 found_criteria = True
 
