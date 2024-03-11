@@ -9,9 +9,11 @@ class ProcessJobs:
     def read(self, path) -> List[Dict]:
         with open(path, encoding="utf-8") as file:
             file_reader = csv.DictReader(file, delimiter=',', quotechar='"')
+            data = [row for row in file_reader]
 
-            header, *data = file_reader
             self.jobs_list = data
+
+        return self.jobs_list
 
     def get_unique_job_types(self) -> List[str]:
         pass
