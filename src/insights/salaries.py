@@ -37,7 +37,7 @@ class ProcessSalaries(ProcessJobs):
 
     def salary_middleware(self, salary):
         if self.invalid_value(salary):
-            raise ValueError("Invalid value")
+            raise ValueError("Invalid salary value")
 
     def min_max_middleware(self, job, min, max):
         if min not in job or max not in job:
@@ -67,7 +67,40 @@ class ProcessSalaries(ProcessJobs):
         else:
             return False
 
+    def is_numeric_string(self, string):
+        try:
+            int(string)
+            return True
+        except TypeError:
+            return False
+        except ValueError:
+            return False
+
     def filter_by_salary_range(
         self, jobs: List[dict], salary: Union[str, int]
     ) -> List[Dict]:
-        pass
+        if self.invalid_value(salary) or not self.is_numeric_string(salary):
+            return []
+
+        matching_jobs_list = list()
+        min = "min_salary"
+        max = "max_salary"
+
+        for job in jobs:
+            if (
+                (
+                    self.is_numeric_string(job[min])
+                ) and (
+                    self.is_numeric_string(job[max])
+                )
+            ):
+                int_min = int(job[min])
+                int_max = int(job[max])
+                int_salary = int(salary)
+
+                if int_salary >= int_min and int_salary <= int_max:
+                    matching_jobs_list.append(job)
+            else:
+                return []
+
+        return matching_jobs_list
