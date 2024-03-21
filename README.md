@@ -8,7 +8,7 @@ Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua cr
 - quais arquivos/pastas foram desenvolvidos pela Trybe.
 -->
 
-# Job Insights
+# Job Insights [![wakatime](https://wakatime.com/badge/user/d430e1a8-f726-4da0-96fd-ac14f7a37701/project/018e2b2f-b964-4dd3-a162-7e03359ef566.svg)](https://wakatime.com/badge/user/d430e1a8-f726-4da0-96fd-ac14f7a37701/project/018e2b2f-b964-4dd3-a162-7e03359ef566)
 
 Projeto realizado em Python com o objetivo de implementar análises a partir de um conjunto de dados sobre empregos.
 
@@ -24,4 +24,3 @@ Projeto realizado em Python com o objetivo de implementar análises a partir de 
 - escrever módulos próprios e importá-los em outros códigos
 
 #### Projeto entregue em 12/03/24
-#### Tempo total de produção: 4 hrs 50 mins
