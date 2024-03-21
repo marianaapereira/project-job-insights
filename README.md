@@ -24,3 +24,4 @@ Projeto realizado em Python com o objetivo de implementar análises a partir de 
 - escrever módulos próprios e importá-los em outros códigos
 
 #### Projeto entregue em 12/03/24
+#### Tempo total de produção: 4 hrs 50 mins
